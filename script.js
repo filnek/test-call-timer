@@ -9,8 +9,8 @@ var x = setInterval(function() {
   var d = new Date();
   var temp = d.getTime();
   if(hostMode) temp-=5000;
-  temp%=30000;
-  var distance = 30000 - temp;
+  temp%=240000;
+  var distance = 240000 - temp;
 	
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -35,7 +35,7 @@ var x = setInterval(function() {
 		console.log("audio should play - update");
    }
    
-   if(distance>20000) beepedAlready=false;
+   if(distance>230000) beepedAlready=false;
 	
    prevDistance = distance;
 }, 50);
