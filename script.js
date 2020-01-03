@@ -28,7 +28,7 @@ var x = setInterval(function() {
   
   document.getElementById("timer").innerHTML =mm + ":" + ss + ":"+ msms;
   
-   if(distance > prevDistance && beepedAlready==false){
+   if((distance > prevDistance || distance<500) && beepedAlready==false){
 		beepedAlready = true;
 		audio.load();
 		audio.play();	
