@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+</head>
+
+<noscript>
+<body>
+</noscript>
+<div id='clickme' class='clickme' onclick='clickme()'><div class='clickmecontent' onclick='clickme()'>
+<h1>Click me!</h1>
+Audio notifications can't play unless you interact with the site. <br>
+</div>
+</div>
+
+<div class="container">
+<h1><div id="timer">dsadasds</div></h1><br>
+<label><input type='checkbox' onclick='hostChange(this);'>I'm a host</label><br>
+
+<select name="ab" onchange="if (this.selectedIndex) changeSound(this.selectedIndex);">
+    <option value="-1" disabled>Select notification sound</option>
+    <option value="1">Alarm</option> 
+    <option value="2">Hint</option>
+    <option value="3">Glass</option>
+    <option value="4">Chime</option>
+</select><br>
+
+
+<img id="s1" style="display:none" src="s1.png"></img><img id="s2" style="display:none" src="s2.png"></img><img id="s3" src="s3.png"></img><img id="sX" style="display:none" src="sX.png"></img>
+<input type="range" min="0" max="100" value="100" class="slider" oninput="changeVolume(this.value)" id="volume">
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
