@@ -35,7 +35,7 @@ var x = setInterval(function() {
 		console.log("audio should play");
    }
    
-   if(distance>29000) beepedAlready=false;
+   if(distance>20000) beepedAlready=false;
 	
    prevDistance = distance;
 }, 50);
