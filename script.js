@@ -36,7 +36,8 @@ var x = setInterval(function() {
    }
    
    if(distance>29000) beepedAlready=false;
-
+	
+   prevDistance = distance;
 }, 50);
 //MAIN LOOP
 
