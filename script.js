@@ -1,6 +1,6 @@
 var audio = new Audio('alarm.mp3');
 var beepedAlready = false;
-var prevDistance=0;
+var prevDistance=240000;
 var hostMode=false;
 var ausrc=["x","alarm.mp3","hint.mp3","glass.mp3","chime.mp3"];
 //MAIN LOOP
