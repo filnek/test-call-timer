@@ -30,7 +30,8 @@ var x = setInterval(function() {
   
    if(distance > prevDistance && beepedAlready==false){
 		beepedAlready = true;
-		audio.play();	   
+		audio.play();	
+		console.log("audio should play");
    }
    
    if(distance>29000) beepedAlready=false;
