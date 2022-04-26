@@ -8,9 +8,9 @@ var x = setInterval(function() {
 
   var d = new Date();
   var temp = d.getTime();
-  if(hostMode) temp-=5000;
-  temp%=240000;
-  var distance = 240000 - temp;
+  temp%=3600000; 
+  temp-=1980000;
+  var distance = 3600000 - temp;
 	
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -28,14 +28,14 @@ var x = setInterval(function() {
   
   document.getElementById("timer").innerHTML =mm + ":" + ss + ":"+ msms;
   
-   if((distance > prevDistance || distance<500) && beepedAlready==false){
+   if((mm=='00' && ss=='00') && beepedAlready==false){
 		beepedAlready = true;
 		audio.load();
 		audio.play();	
 		console.log("audio should play - update");
    }
    
-   if(distance>230000) beepedAlready=false;
+   if(mm!='00' && ss!='00') beepedAlready=false;
 	
    prevDistance = distance;
 }, 50);
